@@ -1,0 +1,16 @@
+# ===========================
+# Stage 1: Build (maven)
+# ===========================
+FROM maven:3.9-eclipse-temurin-21 AS build
+WORKDIR /app
+COPY . .
+RUN ./mvnw clean package -DskipTests
+
+# ===========================
+# Stage 2: Runtime (leve)
+# ===========================
+# Troque o JRE 17 pelo JRE 21 para rodar o JAR compilado
+FROM eclipse-temurin:21-jre-jammy
+WORKDIR /app
+COPY --from=build /app/target/*.jar app.jar
+ENTRYPOINT ["java","-jar","app.jar"]
