@@ -18,6 +18,7 @@ target/
 *.iws
 *.iml
 *.ipr
+Desafio Backend - Java.pdf
 
 ### NetBeans ###
 /nbproject/private/
