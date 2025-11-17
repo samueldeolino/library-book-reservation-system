@@ -1,11 +1,7 @@
 package com.github.samueldeolino.library_book_reservation_system.model.entity;
 
-import com.github.samueldeolino.library_book_reservation_system.model.enums.StatusReservationEnum;
 import jakarta.persistence.*;
 import lombok.*;
-import org.hibernate.validator.constraints.ISBN;
-
-import java.time.LocalDateTime;
 
 @Getter
 @Setter

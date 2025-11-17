@@ -32,5 +32,5 @@ public class ReservationsEntities {
     private StatusReservationEnum status;
 
     @Column(nullable = false)
-    private LocalDateTime created_at;
+    private LocalDateTime createdAt;
 }
