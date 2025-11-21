@@ -26,9 +26,9 @@ public class BooksEntities {
     @Column(unique = true, nullable = false)
     private String isbn;
 
-    @Column(nullable = false)
-    private int availableQuantity;
-
-    @Column(nullable = false)
+    @Column(nullable = false, name = "total_quantity")
     private int totalQuantity;
+
+    @Column(nullable = false, name = "available_quantity")
+    private int availableQuantity;
 }
